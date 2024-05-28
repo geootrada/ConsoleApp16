@@ -26,7 +26,7 @@ namespace ConsoleApp16
             bool isProgress = true;
             
             Random random = new Random();
-            int value = random.Next({ CommandShowTimetableMonday},{CommandShowRandomSelection});
+            int value = random.Next(Convert.ToInt32(CommandShowTimetableMonday), Convert.ToInt32(CommandShowRandomSelection));
 
             Console.WriteLine("Здравствуйте! Предлагаем вам программу-расписание тренировок по бодибилдингу");
             Console.WriteLine("Тренировки распределены по дням недели с понедельника по субботу, воскресенье - выыходной!");
@@ -80,7 +80,7 @@ namespace ConsoleApp16
                         break;
 
                     case CommandExit:
-                        programProgress = false;
+                        isProgress = false;
                         Console.WriteLine("Программа завершена");
                         break;
 
