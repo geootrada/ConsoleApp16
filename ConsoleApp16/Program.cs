@@ -25,9 +25,6 @@ namespace ConsoleApp16
             string userSelection;
             bool isProgress = true;
             
-            Random random = new Random();
-            int value = random.Next(Convert.ToInt32(CommandShowTimetableMonday), Convert.ToInt32(CommandShowRandomSelection));
-
             Console.WriteLine("Здравствуйте! Предлагаем вам программу-расписание тренировок по бодибилдингу");
             Console.WriteLine("Тренировки распределены по дням недели с понедельника по субботу, воскресенье - выыходной!");
             Console.WriteLine("Вам нужно выбрать цифру соответственно дням недели");
@@ -42,8 +39,11 @@ namespace ConsoleApp16
             Console.WriteLine($"Цифра {CommandExit} - выход из программы");
             
             while(isProgress)
-            {         
+            {
                 userSelection = Console.ReadLine();
+
+                Random random = new Random();
+                int value = random.Next(Convert.ToInt32(CommandShowTimetableMonday), Convert.ToInt32(CommandShowRandomSelection));
 
                 switch (userSelection)
                 {
