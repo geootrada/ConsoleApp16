@@ -16,17 +16,17 @@ namespace ConsoleApp16
             const string CommandClearConsole = "8";
             const string CommandExit = "9";
 
-            string monday = "силовая тренировка бицепс+пресс+ноги";
-            string tuesday = "силовая тренировка трицепс+спина+грудь";
-            string Wedesnday = "силовая тренировка на плечи+ноги";
-            string Thursday = "круговая тренировка на рельеф";
-            string Friday = "силовая тренировка бицепс+спина";
-            string Saturday = "силовая тренировка трицепс+грудь";
+            string trainingMonday = "силовая тренировка бицепс+пресс+ноги";
+            string trainingTuesday = "силовая тренировка трицепс+спина+грудь";
+            string trainingWedesnday = "силовая тренировка на плечи+ноги";
+            string trainingThursday = "круговая тренировка на рельеф";
+            string trainingFriday = "силовая тренировка бицепс+спина";
+            string trainingSaturday = "силовая тренировка трицепс+грудь";
             string userSelection;
-            bool programProgress = true;
+            bool isProgress = true;
             
             Random random = new Random();
-            int value = random.Next(1,7);
+            int value = random.Next({ CommandShowTimetableMonday},{CommandShowRandomSelection});
 
             Console.WriteLine("Здравствуйте! Предлагаем вам программу-расписание тренировок по бодибилдингу");
             Console.WriteLine("Тренировки распределены по дням недели с понедельника по субботу, воскресенье - выыходной!");
@@ -41,34 +41,34 @@ namespace ConsoleApp16
             Console.WriteLine($"Цифра {CommandClearConsole} - очистка консоли");
             Console.WriteLine($"Цифра {CommandExit} - выход из программы");
             
-            while(programProgress)
+            while(isProgress)
             {         
                 userSelection = Console.ReadLine();
 
                 switch (userSelection)
                 {
                     case CommandShowTimetableMonday:
-                        Console.WriteLine(monday);
+                        Console.WriteLine(trainingMonday);
                         break;
 
                     case CommandShowTimetableTuesday:
-                        Console.WriteLine(tuesday);
+                        Console.WriteLine(trainingTuesday);
                         break;
 
                     case CommandShowTimetableWedesnday:
-                        Console.WriteLine(Wedesnday);
+                        Console.WriteLine(trainingWedesnday);
                         break;
 
                     case CommandShowTimetableThursday:
-                        Console.WriteLine(Thursday);
+                        Console.WriteLine(trainingThursday);
                         break;
 
                     case CommandShowTimetableFriday:
-                        Console.WriteLine(Friday);
+                        Console.WriteLine(trainingFriday);
                         break;
 
                     case CommandShowTimetableSaturday:
-                        Console.WriteLine(Saturday);
+                        Console.WriteLine(trainingSaturday);
                         break;
 
                     case CommandShowRandomSelection:
